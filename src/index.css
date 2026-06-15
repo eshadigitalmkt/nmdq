@@ -1,0 +1,51 @@
+@import "tailwindcss";
+
+/* =========================
+   Primary Font - Redaction
+========================= */
+
+@font-face {
+  font-family: "Redaction";
+  src: url("./Redaction_50-Regular.woff2") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* =========================
+   Secondary Font - National Park
+========================= */
+
+@font-face {
+  font-family: "NationalPark";
+  src: url("./NationalPark.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* =========================
+   Global Styles
+========================= */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "NationalPark", sans-serif;
+  background: #081525;
+  color: white;
+}
+
+/* =========================
+   Font Utility Classes
+========================= */
+
+.primary-font {
+  font-family: "Redaction", serif;
+}
+
+.secondary-font {
+  font-family: "NationalPark", sans-serif;
+}
