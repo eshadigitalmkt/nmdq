@@ -1,6 +1,7 @@
 
 import { motion, type Variants } from "framer-motion";
 import { ArrowRight, Crosshair, Layers, Terminal } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const About = () => {
   // Stagger variants for a smooth, sequential entrance
@@ -122,6 +123,7 @@ const About = () => {
 
           {/* CTA Pill Button */}
           <motion.div variants={itemVariants}>
+            <Link to="/about" >
             <button
               className="
               secondary-font
@@ -153,6 +155,7 @@ const About = () => {
                 className="transition-transform group-hover:translate-x-1"
               />
             </button>
+            </Link>
           </motion.div>
         </div>
 

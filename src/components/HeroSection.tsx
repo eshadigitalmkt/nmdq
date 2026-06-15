@@ -1,6 +1,7 @@
 
 import { motion, type Variants } from "framer-motion";
 import { ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   // Stagger variants for a smooth, editorial entrance
@@ -175,6 +176,7 @@ const Hero = () => {
           gap-5
           "
         >
+          <Link to="/contact" >
           <button
             className="
             secondary-font
@@ -206,8 +208,10 @@ const Hero = () => {
               className="transition-transform group-hover:translate-x-1"
             />
           </button>
+          </Link>
 
-          <button
+          <Link to="/services">
+          <button 
             className="
             secondary-font
             h-14
@@ -229,7 +233,8 @@ const Hero = () => {
             "
           >
             View Services
-          </button>
+            </button>
+          </Link>
         </motion.div>
       </motion.div>
     </section>

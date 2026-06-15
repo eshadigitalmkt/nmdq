@@ -45,15 +45,15 @@ const ContactPage = () => {
       icon: <Mail size={24} />,
       title: "Email Us",
       desc: "For general questions and partnership opportunities.",
-      value: "solutions@nmdq.com",
-      link: "mailto:solutions@nmdq.com"
+      value: "aneil@nmdq.com",
+      link: "mailto:aneil@nmdq.com"
     },
     {
       icon: <Phone size={24} />,
       title: "Call Us",
       desc: "Speak directly with a member of our team.",
-      value: "+1 (800) 555-0199",
-      link: "tel:+18005550199"
+      value: "+91 9666983000",
+      link: "tel:+919666983000"
     },
     {
       icon: <MapPin size={24} />,

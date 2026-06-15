@@ -51,18 +51,9 @@ const AboutPage = () => {
     },
   ];
 
-  const timeline = [
-    { year: "2023", title: "Company Founded", desc: "NMDQ was established with a clear goal: to bridge the gap between emerging technology networks and traditional corporate structures." },
-    { year: "2024", title: "Expanding Across Sectors", desc: "Successfully expanded our workforce solutions into 6 major industries, matching and placing over 5,000 highly qualified professionals worldwide." },
-    { year: "2025", title: "Technology Integration", desc: "Launched our dedicated technology deployment services, seamlessly pairing strategic consulting with modern software frameworks." },
-    { year: "2026", title: "Global Operations Today", desc: "Proudly partnering with mid-market businesses and large enterprises alike to manage their talent strategy and organizational growth." },
-  ];
+ 
 
-  const team = [
-    { name: "Julian Vance", role: "Chief Executive Officer", image: "/api/placeholder/400/400" },
-    { name: "Amara Sterling", role: "Head of Talent Solutions", image: "/api/placeholder/400/400" },
-    { name: "Kaelen Voss", role: "Director of Technology Delivery", image: "/api/placeholder/400/400" },
-  ];
+ 
 
   return (
     <main className="w-full bg-white text-slate-900 selection:bg-[#1a38ff] selection:text-white overflow-hidden">
@@ -215,109 +206,9 @@ const AboutPage = () => {
         </div>
       </section>
 
-      {/* =========================================
-          SECTION 4: CHRONOLOGICAL MILESTONES
-      ========================================= */}
-      <section className="relative py-24 lg:py-32 border-t border-slate-100 px-5 bg-white">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: "-100px" }}
-            variants={containerVariants}
-            className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-8"
-          >
-            <div className="lg:col-span-4 flex flex-col justify-start">
-              <h2 className="secondary-font text-[#1a38ff] text-xs sm:text-sm font-bold uppercase tracking-[0.3em] mb-4 flex items-center gap-2">
-                <span className="w-4 h-[2px] bg-[#1a38ff]"></span> 02 / Trajectory
-              </h2>
-              <p className="primary-font text-slate-900 text-3xl sm:text-4xl lg:text-5xl uppercase leading-tight mb-6">
-                Our Timeline
-              </p>
-              <p className="secondary-font text-slate-500 text-sm font-medium leading-relaxed uppercase tracking-wider">
-                A brief overview of how we have expanded our capacity and services.
-              </p>
-            </div>
+      
 
-            <div className="lg:col-span-8 flex flex-col border-l-2 border-slate-100 pl-6 sm:pl-12 gap-12 relative">
-              {timeline.map((time, idx) => (
-                <motion.div 
-                  key={idx} 
-                  variants={itemVariants}
-                  className="relative group"
-                >
-                  {/* Timeline Node Point */}
-                  <div className="absolute -left-[31px] sm:-left-[55px] top-1.5 w-4 h-4 rounded-full border-4 border-white bg-[#1a38ff] group-hover:scale-125 transition-transform duration-300" />
-                  
-                  <span className="primary-font text-3xl md:text-4xl text-[#1a38ff] block leading-none mb-2">
-                    {time.year}
-                  </span>
-                  <h3 className="secondary-font text-slate-900 font-bold text-lg sm:text-xl tracking-tight mb-2">
-                    {time.title}
-                  </h3>
-                  <p className="secondary-font text-slate-600 text-sm sm:text-base font-medium leading-relaxed max-w-xl">
-                    {time.desc}
-                  </p>
-                </motion.div>
-              ))}
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* =========================================
-          SECTION 5: LEADERSHIP TEAM
-      ========================================= */}
-      <section className="relative py-24 lg:py-32 bg-slate-50 border-t border-slate-100 px-5">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: "-100px" }}
-            variants={containerVariants}
-            className="flex flex-col gap-16 lg:gap-24"
-          >
-            {/* Header Block */}
-            <div className="flex flex-col items-center text-center max-w-3xl mx-auto">
-              <h2 className="secondary-font text-[#1a38ff] text-xs sm:text-sm font-bold uppercase tracking-[0.3em] mb-4 flex items-center gap-2">
-                <span className="w-4 h-[2px] bg-[#1a38ff]"></span> 03 / Team
-              </h2>
-              <p className="primary-font text-slate-900 text-3xl sm:text-4xl md:text-5xl uppercase leading-none mb-6">
-                Meet Our Leadership
-              </p>
-              <p className="secondary-font text-slate-500 text-sm sm:text-base font-medium max-w-xl">
-                The strategic thinkers and operational leaders focused on delivering measurable value to our partners.
-              </p>
-            </div>
-
-            {/* Team Frames Layout */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto w-full">
-              {team.map((member, idx) => (
-                <motion.div
-                  key={idx}
-                  variants={itemVariants}
-                  className="group flex flex-col items-center text-center"
-                >
-                  {/* Photo Frame Wrapper */}
-                  <div className="w-full aspect-square bg-slate-200 overflow-hidden rounded-[2.5rem] mb-6 border border-slate-200/40 group-hover:shadow-2xl transition-all duration-500 group-hover:-translate-y-1">
-                    <img
-                      src={member.image}
-                      alt={member.name}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 mix-blend-multiply"
-                    />
-                  </div>
-                  <h3 className="primary-font text-slate-900 text-2xl sm:text-3xl mb-1 group-hover:text-[#1a38ff] transition-colors">
-                    {member.name}
-                  </h3>
-                  <span className="secondary-font text-slate-500 text-xs sm:text-sm tracking-widest font-bold uppercase">
-                    {member.role}
-                  </span>
-                </motion.div>
-              ))}
-            </div>
-          </motion.div>
-        </div>
-      </section>
+      
 
     </main>
   );

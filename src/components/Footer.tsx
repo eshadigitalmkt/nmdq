@@ -71,10 +71,10 @@ const Footer = () => {
               Engineering premium workforce, technology, and strategic consulting frameworks to amplify business velocity globally.
             </p>
             <a 
-              href="mailto:solutions@nmdq.com" 
+              href="mailto:aniel@nmdqgrid.com" 
               className="mt-6 secondary-font text-slate-900 text-lg font-bold hover:text-[#1a38ff] transition-colors"
             >
-              solutions@nmdq.com
+              aneil@nmdqgrid.com
             </a>
           </div>
 
