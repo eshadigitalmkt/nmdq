@@ -1,4 +1,4 @@
-import React from "react";
+
 import { motion, type Variants } from "framer-motion";
 import { Target, Users2, ShieldCheck, Sparkles, Eye, Compass } from "lucide-react";
 

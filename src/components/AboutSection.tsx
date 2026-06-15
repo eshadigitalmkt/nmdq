@@ -1,4 +1,4 @@
-import React from "react";
+
 import { motion, type Variants } from "framer-motion";
 import { ArrowRight, Crosshair, Layers, Terminal } from "lucide-react";
 

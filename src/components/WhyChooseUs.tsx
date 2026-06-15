@@ -1,4 +1,4 @@
-import React from "react";
+
 import { motion, type Variants } from "framer-motion";
 import { ShieldCheck, Zap, CheckCircle2, LineChart, Eye, Compass } from "lucide-react";
 
