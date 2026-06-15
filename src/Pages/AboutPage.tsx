@@ -94,7 +94,7 @@ const AboutPage = () => {
             </div>
             <div className="lg:col-span-7">
               <p className="secondary-font text-slate-600 text-sm sm:text-base md:text-lg leading-relaxed font-medium mb-6">
-                NMDQ GRID is a premier business solutions firm operating at the crossroads of specialized recruitment, IT deployment, and strategic consulting. We help companies navigate operational challenges, refine internal processes, and find the talent they need to build sustainable advantages.
+                NMD Q GRID is a premier business solutions firm operating at the crossroads of specialized recruitment, IT deployment, and strategic consulting. We help companies navigate operational challenges, refine internal processes, and find the talent they need to build sustainable advantages.
               </p>
               <p className="secondary-font text-slate-600 text-sm sm:text-base md:text-lg leading-relaxed font-medium">
                 From helping agile startups set up their very first operational workflows to supporting large corporate enterprises in scaling engineering cells, we construct the recruitment pipelines and technology systems necessary to deliver long-term value.

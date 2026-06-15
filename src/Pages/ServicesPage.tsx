@@ -447,7 +447,7 @@ const ServicesPage = () => {
             </motion.h2>
 
             <motion.p variants={itemVariants} className="secondary-font text-slate-600 text-base sm:text-lg leading-relaxed font-medium mb-12 max-w-2xl">
-              Partner with NMDQ GRID to engineer your workforce, deploy cutting-edge technology, and secure your market advantage. Let's map out your next operational phase.
+              Partner with NMD Q GRID to engineer your workforce, deploy cutting-edge technology, and secure your market advantage. Let's map out your next operational phase.
             </motion.p>
             
           </motion.div>

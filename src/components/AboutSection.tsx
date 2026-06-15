@@ -110,7 +110,7 @@ const About = () => {
             max-w-2xl
             "
           >
-            NMDQ GRID is a structural force in the modern corporate ecosystem. We don't just fill seats; we engineer specialized workforce solutions that align aggressively with your technological and strategic imperatives.
+            NMD Q GRID is a structural force in the modern corporate ecosystem. We don't just fill seats; we engineer specialized workforce solutions that align aggressively with your technological and strategic imperatives.
           </motion.p>
 
           {/* CTA Pill Button - Outlined Navy */}

@@ -10,13 +10,13 @@ const Testimonials = () => {
       name: "Sarah Jenkins",
       role: "Chief Operating Officer",
       company: "TechNova",
-      quote: "NMDQ GRID didn't just fill our open roles; they completely restructured our hiring process. Their team understood our culture immediately and brought in top-tier talent that helped us scale effortlessly.",
+      quote: "NMD Q GRID didn't just fill our open roles; they completely restructured our hiring process. Their team understood our culture immediately and brought in top-tier talent that helped us scale effortlessly.",
     },
     {
       name: "David Chen",
       role: "VP of Engineering",
       company: "BluePeak Solutions",
-      quote: "Finding specialized developers is always a challenge, but NMDQ GRID made it look easy. Their technology deployment solutions and staffing expertise have been invaluable to our recent product launch.",
+      quote: "Finding specialized developers is always a challenge, but NMD Q GRID made it look easy. Their technology deployment solutions and staffing expertise have been invaluable to our recent product launch.",
     },
     {
       name: "Elena Rodriguez",
