@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion, AnimatePresence, type Variants } from "framer-motion";
-import { Mail, Phone, MapPin, ArrowRight, Clock, ChevronDown } from "lucide-react";
+import { Mail, Phone, ArrowRight, MapPin, ChevronDown } from "lucide-react";
 
 const ContactPage = () => {
   // Custom Dropdown State
@@ -45,8 +45,8 @@ const ContactPage = () => {
       icon: <Mail size={24} />,
       title: "Email Us",
       desc: "For general questions and partnership opportunities.",
-      value: "aneil@nmdq.com",
-      link: "mailto:aneil@nmdq.com"
+      value: "hr@nmdqgrid.com",
+      link: "mailto:hr@nmdqgrid.com"
     },
     {
       icon: <Phone size={24} />,
@@ -59,13 +59,13 @@ const ContactPage = () => {
       icon: <MapPin size={24} />,
       title: "Our Office",
       desc: "Visit us at our main headquarters.",
-      value: "Hyderabad, Telangana, India",
-      link: "#"
+      value: "House no: 1, F45 Building, 42/1, Masjid Banda Rd, above Tulsi Furniture, Kondapur, Hyderabad, Telangana 500084",
+      link: "https://maps.google.com/?q=House+no+1+F45+Building+Masjid+Banda+Rd+Kondapur+Hyderabad+Telangana+500084" 
     }
   ];
 
   return (
-    <main className="w-full bg-white text-slate-900 selection:bg-[#1a38ff] selection:text-white overflow-hidden pb-24">
+    <main className="w-full bg-white text-slate-900 selection:bg-[#092f61] selection:text-white overflow-hidden pb-24">
       
       {/* =========================================
           SECTION 1: HERO HEADER
@@ -77,21 +77,21 @@ const ContactPage = () => {
           animate="visible"
           className="max-w-7xl mx-auto flex flex-col items-center text-center"
         >
-          {/* Section Tag */}
+          {/* Section Tag - Orange Accent */}
           <motion.div variants={itemVariants} className="flex items-center gap-3 mb-8">
-            <span className="w-8 h-[2px] bg-[#1a38ff]"></span>
-            <span className="secondary-font text-[#1a38ff] text-xs sm:text-sm font-bold uppercase tracking-[0.3em]">
+            <span className="w-8 h-[2px] bg-[#e67416]"></span>
+            <span className="secondary-font text-[#e67416] text-xs sm:text-sm font-bold uppercase tracking-[0.3em]">
               Connect With Us
             </span>
-            <span className="w-8 h-[2px] bg-[#1a38ff]"></span>
+            <span className="w-8 h-[2px] bg-[#e67416]"></span>
           </motion.div>
 
-          {/* Mixed Typography Main Title */}
+          {/* Mixed Typography Main Title - Secondary Font & Navy */}
           <motion.h1 variants={itemVariants} className="flex flex-col mb-8 w-full">
-            <span className="secondary-font text-[#1a38ff] font-black uppercase tracking-tighter leading-[0.85] text-5xl sm:text-7xl md:text-9xl">
+            <span className="secondary-font text-[#092f61] font-black uppercase tracking-tighter leading-[0.85] text-5xl sm:text-7xl md:text-9xl">
               Get in
             </span>
-            <span className="primary-font text-[#1a38ff] leading-[1.3] text-6xl sm:text-8xl md:text-9xl lg:text-[10rem] -mt-2 sm:-mt-5 md:-mt-6">
+            <span className="secondary-font text-[#092f61] font-black uppercase tracking-tighter leading-[1.3] text-6xl sm:text-8xl md:text-9xl lg:text-[10rem] -mt-2 sm:-mt-5 md:-mt-6">
               Touch
             </span>
           </motion.h1>
@@ -120,7 +120,7 @@ const ContactPage = () => {
             
             {/* Left Column: Contact Methods & Info */}
             <div className="lg:col-span-5 flex flex-col gap-8 lg:pr-10">
-              <h2 className="primary-font text-3xl sm:text-4xl text-slate-900 mb-2">
+              <h2 className="secondary-font text-slate-900 font-bold text-3xl sm:text-4xl mb-2">
                 Contact Info
               </h2>
               <p className="secondary-font text-slate-600 text-sm sm:text-base font-medium mb-4">
@@ -133,19 +133,19 @@ const ContactPage = () => {
                     href={method.link}
                     key={idx}
                     variants={itemVariants}
-                    className="group flex items-start gap-5 p-6 rounded-[2rem] bg-slate-50 border border-slate-100 hover:bg-white hover:border-[#1a38ff]/30 hover:shadow-xl transition-all duration-300"
+                    className="group flex items-start gap-5 p-6 rounded-[2rem] bg-slate-50 border border-slate-100 hover:bg-white hover:border-[#092f61]/30 hover:shadow-xl transition-all duration-300"
                   >
-                    <div className="w-12 h-12 shrink-0 rounded-full bg-white text-[#1a38ff] shadow-sm flex items-center justify-center group-hover:bg-[#1a38ff] group-hover:text-white transition-colors duration-300">
+                    <div className="w-12 h-12 shrink-0 rounded-full bg-white text-[#092f61] shadow-sm flex items-center justify-center group-hover:bg-[#092f61] group-hover:text-white transition-colors duration-300">
                       {method.icon}
                     </div>
-                    <div className="flex flex-col">
-                      <span className="secondary-font font-bold text-slate-900 text-lg mb-1 group-hover:text-[#1a38ff] transition-colors">
+                    <div className="flex flex-col overflow-hidden">
+                      <span className="secondary-font font-bold text-slate-900 text-lg mb-1 group-hover:text-[#092f61] transition-colors">
                         {method.title}
                       </span>
                       <span className="secondary-font text-slate-500 text-xs sm:text-sm font-medium mb-2">
                         {method.desc}
                       </span>
-                      <span className="secondary-font text-[#1a38ff] font-bold text-sm tracking-wide">
+                      <span className="secondary-font text-[#092f61] font-bold text-sm tracking-wide break-all">
                         {method.value}
                       </span>
                     </div>
@@ -153,18 +153,7 @@ const ContactPage = () => {
                 ))}
               </div>
 
-              {/* Working Hours Badge */}
-              <motion.div variants={itemVariants} className="mt-4 flex items-center gap-3 p-5 rounded-3xl bg-[#1a38ff]/5 border border-[#1a38ff]/10">
-                <Clock size={20} className="text-[#1a38ff]" />
-                <div className="flex flex-col">
-                  <span className="secondary-font text-xs font-bold uppercase tracking-widest text-[#1a38ff]">
-                    Operating Hours
-                  </span>
-                  <span className="secondary-font text-sm font-medium text-slate-700 mt-1">
-                    Monday – Friday, 9:00 AM to 6:00 PM (IST)
-                  </span>
-                </div>
-              </motion.div>
+              
             </div>
 
             {/* Right Column: The Contact Form */}
@@ -172,7 +161,7 @@ const ContactPage = () => {
               variants={itemVariants}
               className="lg:col-span-7 bg-white border-2 border-slate-100 rounded-[2.5rem] sm:rounded-[3rem] p-8 sm:p-12 lg:p-14 shadow-xl shadow-slate-200/40 relative overflow-hidden"
             >
-              <h3 className="primary-font text-3xl sm:text-4xl text-slate-900 mb-8">
+              <h3 className="secondary-font text-slate-900 font-bold text-3xl sm:text-4xl mb-8">
                 Send Us a Message
               </h3>
 
@@ -187,7 +176,7 @@ const ContactPage = () => {
                     <input 
                       type="text" 
                       placeholder="John Doe"
-                      className="w-full bg-slate-50 border border-slate-200 rounded-2xl px-5 py-4 secondary-font text-sm text-slate-900 focus:outline-none focus:border-[#1a38ff] focus:ring-1 focus:ring-[#1a38ff] transition-all"
+                      className="w-full bg-slate-50 border border-slate-200 rounded-2xl px-5 py-4 secondary-font text-sm text-slate-900 focus:outline-none focus:border-[#092f61] focus:ring-1 focus:ring-[#092f61] transition-all"
                     />
                   </div>
                   <div className="flex flex-col gap-2">
@@ -197,7 +186,7 @@ const ContactPage = () => {
                     <input 
                       type="text" 
                       placeholder="Your Company"
-                      className="w-full bg-slate-50 border border-slate-200 rounded-2xl px-5 py-4 secondary-font text-sm text-slate-900 focus:outline-none focus:border-[#1a38ff] focus:ring-1 focus:ring-[#1a38ff] transition-all"
+                      className="w-full bg-slate-50 border border-slate-200 rounded-2xl px-5 py-4 secondary-font text-sm text-slate-900 focus:outline-none focus:border-[#092f61] focus:ring-1 focus:ring-[#092f61] transition-all"
                     />
                   </div>
                 </div>
@@ -211,7 +200,7 @@ const ContactPage = () => {
                     <input 
                       type="email" 
                       placeholder="john@example.com"
-                      className="w-full bg-slate-50 border border-slate-200 rounded-2xl px-5 py-4 secondary-font text-sm text-slate-900 focus:outline-none focus:border-[#1a38ff] focus:ring-1 focus:ring-[#1a38ff] transition-all"
+                      className="w-full bg-slate-50 border border-slate-200 rounded-2xl px-5 py-4 secondary-font text-sm text-slate-900 focus:outline-none focus:border-[#092f61] focus:ring-1 focus:ring-[#092f61] transition-all"
                     />
                   </div>
                   <div className="flex flex-col gap-2">
@@ -221,7 +210,7 @@ const ContactPage = () => {
                     <input 
                       type="tel" 
                       placeholder="+1 (555) 000-0000"
-                      className="w-full bg-slate-50 border border-slate-200 rounded-2xl px-5 py-4 secondary-font text-sm text-slate-900 focus:outline-none focus:border-[#1a38ff] focus:ring-1 focus:ring-[#1a38ff] transition-all"
+                      className="w-full bg-slate-50 border border-slate-200 rounded-2xl px-5 py-4 secondary-font text-sm text-slate-900 focus:outline-none focus:border-[#092f61] focus:ring-1 focus:ring-[#092f61] transition-all"
                     />
                   </div>
                 </div>
@@ -236,7 +225,7 @@ const ContactPage = () => {
                   <div 
                     onClick={() => setIsDropdownOpen(!isDropdownOpen)}
                     className={`w-full bg-slate-50 border ${
-                      isDropdownOpen ? "border-[#1a38ff] ring-1 ring-[#1a38ff]" : "border-slate-200"
+                      isDropdownOpen ? "border-[#092f61] ring-1 ring-[#092f61]" : "border-slate-200"
                     } rounded-2xl px-5 py-4 secondary-font text-sm cursor-pointer flex justify-between items-center transition-all select-none`}
                   >
                     <span className={selectedService ? "text-slate-900" : "text-slate-400"}>
@@ -270,8 +259,8 @@ const ContactPage = () => {
                             }}
                             className={`px-5 py-3 secondary-font text-sm cursor-pointer transition-colors ${
                               selectedService === option.value 
-                                ? "bg-[#1a38ff]/10 text-[#1a38ff] font-bold" 
-                                : "text-slate-600 hover:bg-slate-50 hover:text-[#1a38ff]"
+                                ? "bg-[#092f61]/10 text-[#092f61] font-bold" 
+                                : "text-slate-600 hover:bg-slate-50 hover:text-[#092f61]"
                             }`}
                           >
                             {option.label}
@@ -282,10 +271,10 @@ const ContactPage = () => {
                   </AnimatePresence>
                 </div>
 
-                {/* Submit Button */}
+                {/* Submit Button - Orange Pill */}
                 <button 
                   type="submit"
-                  className="secondary-font group mt-4 h-14 w-full bg-[#1a38ff] text-white font-bold uppercase tracking-widest text-sm flex items-center justify-center gap-3 rounded-full transition-all duration-300 hover:shadow-xl hover:shadow-[#1a38ff]/20 hover:-translate-y-1"
+                  className="secondary-font group mt-4 h-14 w-full bg-[#e67416] text-white font-bold uppercase tracking-widest text-sm flex items-center justify-center gap-3 rounded-full transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-[#e67416]/20"
                 >
                   Send Request
                   <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" />

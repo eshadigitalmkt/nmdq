@@ -19,7 +19,6 @@ const Navbar = () => {
     };
   }, []);
 
-  // Updated to use router paths instead of hash links
   const navLinks = [
     { name: "Home", path: "/" },
     { name: "About", path: "/about" },
@@ -61,8 +60,8 @@ const Navbar = () => {
     >
       <div className="max-w-7xl mx-auto px-5 lg:px-8">
         <div className="h-16 flex items-center justify-between">
+          
           {/* Logo */}
-         {/* Logo */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
@@ -72,7 +71,7 @@ const Navbar = () => {
               <img 
                 src="/NMDQ-Logo.png" /* Replace with your actual logo file path */
                 alt="NMDQ Logo" 
-                className="h-14 md:h-18 w-auto object-cover" /* Adjust height (h-8, h-10, etc.) as needed */
+                className="h-14 md:h-18 w-auto object-cover" /* Adjust height as needed */
               />
             </Link>
           </motion.div>
@@ -90,7 +89,7 @@ const Navbar = () => {
                   to={link.path}
                   className="
                   secondary-font 
-                  text-[#1a38ff] 
+                  text-[#092f61] 
                   hover:opacity-70 
                   transition-opacity 
                   duration-300 
@@ -103,7 +102,7 @@ const Navbar = () => {
               </motion.div>
             ))}
 
-            {/* Desktop CTA - Cobalt Blue Pill */}
+            {/* Desktop CTA - Orange Pill */}
             <motion.div variants={linkVariants}>
               <Link
                 to="/contact"
@@ -112,7 +111,7 @@ const Navbar = () => {
                 group 
                 px-5 
                 h-10 
-                bg-[#1a38ff] 
+                bg-[#e67416] 
                 text-white 
                 font-medium 
                 text-sm 
@@ -124,7 +123,7 @@ const Navbar = () => {
                 duration-300 
                 hover:scale-105 
                 hover:shadow-lg 
-                hover:shadow-[#1a38ff]/20
+                hover:shadow-[#e67416]/20
                 "
               >
                 Contact
@@ -137,10 +136,10 @@ const Navbar = () => {
             </motion.div>
           </motion.nav>
 
-          {/* Mobile Menu Button */}
+          {/* Mobile Menu Button - Navy */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden text-[#1a38ff] hover:opacity-70 transition-opacity"
+            className="md:hidden text-[#092f61] hover:opacity-70 transition-opacity"
           >
             {isOpen ? <X size={28} strokeWidth={1.5} /> : <Menu size={28} strokeWidth={1.5} />}
           </button>
@@ -170,7 +169,7 @@ const Navbar = () => {
                     onClick={() => setIsOpen(false)}
                     className="
                     secondary-font 
-                    text-[#1a38ff] 
+                    text-[#092f61] 
                     text-lg 
                     font-medium 
                     hover:bg-slate-50 
@@ -186,6 +185,7 @@ const Navbar = () => {
                 </motion.div>
               ))}
 
+              {/* Mobile CTA - Orange Pill */}
               <motion.div
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -199,7 +199,7 @@ const Navbar = () => {
                   secondary-font 
                   h-12 
                   w-full 
-                  bg-[#1a38ff] 
+                  bg-[#e67416] 
                   text-white 
                   font-medium 
                   text-base 

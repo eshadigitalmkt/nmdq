@@ -1,4 +1,3 @@
-
 import { motion, type Variants } from "framer-motion";
 import { 
   Monitor, 
@@ -104,27 +103,27 @@ const Industries = () => {
               TOP ROW: Centered Editorial Header
           ========================================= */}
           <div className="flex flex-col items-center text-center max-w-4xl mx-auto">
-            {/* Section Tag */}
+            {/* Section Tag - Orange Accent */}
             <motion.div
               variants={itemVariants}
               className="flex items-center gap-3 mb-8"
             >
-              <span className="w-8 h-[2px] bg-[#1a38ff]"></span>
-              <span className="secondary-font text-[#1a38ff] text-xs sm:text-sm font-bold uppercase tracking-[0.3em]">
+              <span className="w-8 h-[2px] bg-[#e67416]"></span>
+              <span className="secondary-font text-[#e67416] text-xs sm:text-sm font-bold uppercase tracking-[0.3em]">
                 System / Sectors
               </span>
-              <span className="w-8 h-[2px] bg-[#1a38ff]"></span>
+              <span className="w-8 h-[2px] bg-[#e67416]"></span>
             </motion.div>
 
-            {/* Mixed Typography Heading */}
+            {/* Mixed Typography Heading - All Secondary Font & Navy */}
             <motion.h2
               variants={itemVariants}
               className="flex flex-col mb-8 w-full"
             >
-              <span className="secondary-font text-[#1a38ff] font-black uppercase tracking-tighter leading-[0.9] text-5xl sm:text-6xl md:text-8xl">
+              <span className="secondary-font text-[#092f61] font-black uppercase tracking-tighter leading-[0.9] text-5xl sm:text-6xl md:text-8xl">
                 Industries
               </span>
-              <span className="primary-font text-[#1a38ff] leading-[1] text-6xl sm:text-7xl md:text-8xl lg:text-[8rem] -mt-2 sm:-mt-4">
+              <span className="secondary-font text-[#092f61] font-black uppercase tracking-tighter leading-[1] text-5xl sm:text-6xl md:text-8xl -mt-1 sm:-mt-2">
                 We Serve
               </span>
             </motion.h2>
@@ -164,9 +163,9 @@ const Industries = () => {
                 border
                 border-slate-100
                 hover:bg-white
-                hover:border-[#1a38ff]/20
+                hover:border-[#092f61]/20
                 hover:shadow-2xl
-                hover:shadow-[#1a38ff]/10
+                hover:shadow-[#092f61]/10
                 hover:-translate-y-2
                 transition-all
                 duration-500
@@ -178,23 +177,22 @@ const Industries = () => {
                 "
               >
                 {/* Abstract corner background for hover */}
-                <div className="absolute -top-10 -right-10 w-32 h-32 bg-[#1a38ff]/5 rounded-full blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+                <div className="absolute -top-10 -right-10 w-32 h-32 bg-[#092f61]/5 rounded-full blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
 
                 {/* Icon */}
-                <div className="w-12 h-12 rounded-full bg-white shadow-sm flex items-center justify-center text-[#1a38ff] mb-6 group-hover:scale-110 group-hover:bg-[#1a38ff] group-hover:text-white transition-all duration-500 relative z-10">
+                <div className="w-12 h-12 rounded-full bg-white shadow-sm flex items-center justify-center text-[#092f61] mb-6 group-hover:scale-110 group-hover:bg-[#092f61] group-hover:text-white transition-all duration-500 relative z-10">
                   {item.icon}
                 </div>
 
                 {/* Text Content */}
                 <div className="relative z-10 grow flex flex-col">
-                  <h3 className="secondary-font text-slate-900 font-bold text-lg sm:text-xl tracking-tight mb-3 group-hover:text-[#1a38ff] transition-colors duration-300">
+                  {/* Title changes to orange on hover */}
+                  <h3 className="secondary-font text-slate-900 font-bold text-lg sm:text-xl tracking-tight mb-3 group-hover:text-[#e67416] transition-colors duration-300">
                     {item.title}
                   </h3>
                   <p className="secondary-font text-slate-600 text-xs sm:text-sm leading-relaxed font-medium mb-6">
                     {item.desc}
                   </p>
-
-                  
                 </div>
               </motion.div>
             ))}

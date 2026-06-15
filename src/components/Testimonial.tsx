@@ -10,13 +10,13 @@ const Testimonials = () => {
       name: "Sarah Jenkins",
       role: "Chief Operating Officer",
       company: "TechNova",
-      quote: "NMDQ didn't just fill our open roles; they completely restructured our hiring process. Their team understood our culture immediately and brought in top-tier talent that helped us scale effortlessly.",
+      quote: "NMDQ GRID didn't just fill our open roles; they completely restructured our hiring process. Their team understood our culture immediately and brought in top-tier talent that helped us scale effortlessly.",
     },
     {
       name: "David Chen",
       role: "VP of Engineering",
       company: "BluePeak Solutions",
-      quote: "Finding specialized developers is always a challenge, but NMDQ made it look easy. Their technology deployment solutions and staffing expertise have been invaluable to our recent product launch.",
+      quote: "Finding specialized developers is always a challenge, but NMDQ GRID made it look easy. Their technology deployment solutions and staffing expertise have been invaluable to our recent product launch.",
     },
     {
       name: "Elena Rodriguez",
@@ -79,21 +79,21 @@ const Testimonials = () => {
           variants={headerVariants}
           className="flex flex-col items-center text-center mb-16 lg:mb-24"
         >
-          {/* Section Tag */}
+          {/* Section Tag - Orange Accent */}
           <div className="flex items-center gap-3 mb-8">
-            <span className="w-8 h-[2px] bg-[#1a38ff]"></span>
-            <span className="secondary-font text-[#1a38ff] text-xs sm:text-sm font-bold uppercase tracking-[0.3em]">
+            <span className="w-8 h-[2px] bg-[#e67416]"></span>
+            <span className="secondary-font text-[#e67416] text-xs sm:text-sm font-bold uppercase tracking-[0.3em]">
               Client Stories
             </span>
-            <span className="w-8 h-[2px] bg-[#1a38ff]"></span>
+            <span className="w-8 h-[2px] bg-[#e67416]"></span>
           </div>
 
-          {/* Mixed Typography Heading */}
+          {/* Typography Heading - Secondary Font & Navy */}
           <h2 className="flex flex-col">
-            <span className="secondary-font text-[#1a38ff] font-black uppercase tracking-tighter leading-[0.9] text-5xl sm:text-6xl md:text-8xl">
+            <span className="secondary-font text-[#092f61] font-black uppercase tracking-tighter leading-[0.9] text-5xl sm:text-6xl md:text-8xl">
               Trusted
             </span>
-            <span className="primary-font text-[#1a38ff] leading-[1] text-6xl sm:text-7xl md:text-8xl lg:text-[8rem] -mt-2 sm:-mt-4">
+            <span className="secondary-font text-[#092f61] font-black uppercase tracking-tighter leading-[1] text-5xl sm:text-6xl md:text-8xl -mt-1 sm:-mt-2">
               Partners
             </span>
           </h2>
@@ -105,7 +105,7 @@ const Testimonials = () => {
         <div className="relative w-full max-w-4xl mx-auto">
           
           {/* Decorative Quote Icon Background */}
-          <div className="absolute -top-10 -left-6 sm:-top-16 sm:-left-12 text-[#1a38ff]/5 z-0">
+          <div className="absolute -top-10 -left-6 sm:-top-16 sm:-left-12 text-[#092f61]/5 z-0">
             <Quote size={120} className="rotate-180" />
           </div>
 
@@ -120,12 +120,13 @@ const Testimonials = () => {
                 exit="exit"
                 className="w-full flex flex-col items-center text-center"
               >
-                <p className="primary-font text-slate-800 text-2xl sm:text-3xl lg:text-4xl leading-relaxed sm:leading-relaxed mb-10">
+                {/* Replaced primary-font with secondary-font */}
+                <p className="secondary-font font-medium italic text-slate-800 text-2xl sm:text-3xl lg:text-4xl leading-relaxed sm:leading-relaxed mb-10">
                   "{testimonials[currentIndex].quote}"
                 </p>
                 
                 <div className="flex flex-col items-center">
-                  <span className="secondary-font text-[#1a38ff] font-bold uppercase tracking-widest text-sm sm:text-base mb-1">
+                  <span className="secondary-font text-[#092f61] font-bold uppercase tracking-widest text-sm sm:text-base mb-1">
                     {testimonials[currentIndex].name}
                   </span>
                   <span className="secondary-font text-slate-500 text-xs sm:text-sm tracking-wider uppercase font-medium">
@@ -141,11 +142,11 @@ const Testimonials = () => {
           ========================================= */}
           <div className="mt-12 flex flex-col items-center gap-6">
             
-            {/* Arrow Buttons */}
+            {/* Arrow Buttons - Navy */}
             <div className="flex items-center gap-4">
               <button
                 onClick={handlePrev}
-                className="w-12 h-12 rounded-full border-2 border-slate-200 flex items-center justify-center text-[#1a38ff] hover:bg-[#1a38ff] hover:border-[#1a38ff] hover:text-white transition-all duration-300"
+                className="w-12 h-12 rounded-full border-2 border-slate-200 flex items-center justify-center text-[#092f61] hover:bg-[#092f61] hover:border-[#092f61] hover:text-white transition-all duration-300"
                 aria-label="Previous testimonial"
               >
                 <ChevronLeft size={24} />
@@ -153,14 +154,14 @@ const Testimonials = () => {
               
               <button
                 onClick={handleNext}
-                className="w-12 h-12 rounded-full border-2 border-slate-200 flex items-center justify-center text-[#1a38ff] hover:bg-[#1a38ff] hover:border-[#1a38ff] hover:text-white transition-all duration-300"
+                className="w-12 h-12 rounded-full border-2 border-slate-200 flex items-center justify-center text-[#092f61] hover:bg-[#092f61] hover:border-[#092f61] hover:text-white transition-all duration-300"
                 aria-label="Next testimonial"
               >
                 <ChevronRight size={24} />
               </button>
             </div>
 
-            {/* Pagination Dots */}
+            {/* Pagination Dots - Orange for Active */}
             <div className="flex items-center gap-2">
               {testimonials.map((_, idx) => (
                 <button
@@ -168,8 +169,8 @@ const Testimonials = () => {
                   onClick={() => setCurrentIndex(idx)}
                   className={`transition-all duration-300 rounded-full ${
                     currentIndex === idx 
-                      ? "w-8 h-2 bg-[#1a38ff]" 
-                      : "w-2 h-2 bg-slate-300 hover:bg-[#1a38ff]/50"
+                      ? "w-8 h-2 bg-[#e67416]" 
+                      : "w-2 h-2 bg-slate-300 hover:bg-[#e67416]/50"
                   }`}
                   aria-label={`Go to slide ${idx + 1}`}
                 />

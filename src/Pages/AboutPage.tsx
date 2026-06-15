@@ -1,4 +1,3 @@
-
 import { motion, type Variants } from "framer-motion";
 import { Target, Users2, ShieldCheck, Sparkles, Eye, Compass } from "lucide-react";
 
@@ -51,12 +50,8 @@ const AboutPage = () => {
     },
   ];
 
- 
-
- 
-
   return (
-    <main className="w-full bg-white text-slate-900 selection:bg-[#1a38ff] selection:text-white overflow-hidden">
+    <main className="w-full bg-white text-slate-900 selection:bg-[#e67416] selection:text-white overflow-hidden">
       
       {/* =========================================
           SECTION 1: HERO & STORY HEADER
@@ -68,21 +63,21 @@ const AboutPage = () => {
           animate="visible"
           className="max-w-7xl mx-auto flex flex-col items-center text-center"
         >
-          {/* Section Tag */}
+          {/* Section Tag - Orange Accent */}
           <motion.div variants={itemVariants} className="flex items-center gap-3 mb-8">
-            <span className="w-8 h-[2px] bg-[#1a38ff]"></span>
-            <span className="secondary-font text-[#1a38ff] text-xs sm:text-sm font-bold uppercase tracking-[0.3em]">
+            <span className="w-8 h-[2px] bg-[#e67416]"></span>
+            <span className="secondary-font text-[#e67416] text-xs sm:text-sm font-bold uppercase tracking-[0.3em]">
               Who We Are
             </span>
-            <span className="w-8 h-[2px] bg-[#1a38ff]"></span>
+            <span className="w-8 h-[2px] bg-[#e67416]"></span>
           </motion.div>
 
-          {/* Mixed Typography Page Title */}
+          {/* Mixed Typography Page Title - All Secondary Font & Navy */}
           <motion.h1 variants={itemVariants} className="flex flex-col mb-10 w-full">
-            <span className="secondary-font text-[#1a38ff] font-black uppercase tracking-tighter leading-[0.85] text-5xl sm:text-7xl md:text-9xl lg:text-[10rem]">
+            <span className="secondary-font text-[#092f61] font-black uppercase tracking-tighter leading-[0.85] text-5xl sm:text-7xl md:text-9xl lg:text-[10rem]">
               Driven By People
             </span>
-            <span className="primary-font text-[#1a38ff] leading-[1] text-6xl sm:text-8xl md:text-9xl lg:text-[11rem] -mt-2 sm:-mt-5 md:-mt-6">
+            <span className="secondary-font text-[#092f61] font-black uppercase tracking-tighter leading-[1] text-6xl sm:text-8xl md:text-9xl lg:text-[11rem] -mt-2 sm:-mt-5 md:-mt-6">
               Powered by Tech
             </span>
           </motion.h1>
@@ -93,13 +88,13 @@ const AboutPage = () => {
             className="grid grid-cols-1 lg:grid-cols-12 gap-10 text-left max-w-6xl mx-auto pt-12 border-t border-slate-100 mt-6"
           >
             <div className="lg:col-span-5">
-              <p className="primary-font text-[#1a38ff] text-2xl sm:text-3xl lg:text-4xl leading-tight">
+              <p className="secondary-font font-bold text-[#092f61] text-2xl sm:text-3xl lg:text-4xl leading-tight">
                 We believe that organizations do not grow through guesswork—they scale through reliable strategy and talented teams.
               </p>
             </div>
             <div className="lg:col-span-7">
               <p className="secondary-font text-slate-600 text-sm sm:text-base md:text-lg leading-relaxed font-medium mb-6">
-                NMDQ is a premier business solutions firm operating at the crossroads of specialized recruitment, IT deployment, and strategic consulting. We help companies navigate operational challenges, refine internal processes, and find the talent they need to build sustainable advantages.
+                NMDQ GRID is a premier business solutions firm operating at the crossroads of specialized recruitment, IT deployment, and strategic consulting. We help companies navigate operational challenges, refine internal processes, and find the talent they need to build sustainable advantages.
               </p>
               <p className="secondary-font text-slate-600 text-sm sm:text-base md:text-lg leading-relaxed font-medium">
                 From helping agile startups set up their very first operational workflows to supporting large corporate enterprises in scaling engineering cells, we construct the recruitment pipelines and technology systems necessary to deliver long-term value.
@@ -127,14 +122,14 @@ const AboutPage = () => {
               className="relative p-8 sm:p-12 bg-white border border-slate-200/60 rounded-[2rem] shadow-sm flex flex-col gap-4 justify-center"
             >
               <div className="flex items-center gap-3">
-                <div className="w-12 h-12 rounded-full bg-[#1a38ff]/10 flex items-center justify-center shrink-0 text-[#1a38ff]">
+                <div className="w-12 h-12 rounded-full bg-[#092f61]/10 flex items-center justify-center shrink-0 text-[#092f61]">
                   <Eye size={24} strokeWidth={1.5} />
                 </div>
-                <span className="secondary-font text-[#1a38ff] text-xs sm:text-sm font-bold uppercase tracking-widest">
+                <span className="secondary-font text-[#092f61] text-xs sm:text-sm font-bold uppercase tracking-widest">
                   Our Vision
                 </span>
               </div>
-              <p className="primary-font text-slate-800 text-xl sm:text-2xl leading-relaxed italic">
+              <p className="secondary-font font-medium text-slate-800 text-xl sm:text-2xl leading-relaxed italic">
                 "To become a trusted business solutions company delivering workforce, technology, and strategic consulting services that drive sustainable growth and operational excellence."
               </p>
             </motion.div>
@@ -145,14 +140,14 @@ const AboutPage = () => {
               className="relative p-8 sm:p-12 bg-white border border-slate-200/60 rounded-[2rem] shadow-sm flex flex-col gap-4 justify-center"
             >
               <div className="flex items-center gap-3">
-                <div className="w-12 h-12 rounded-full bg-[#1a38ff]/10 flex items-center justify-center shrink-0 text-[#1a38ff]">
+                <div className="w-12 h-12 rounded-full bg-[#092f61]/10 flex items-center justify-center shrink-0 text-[#092f61]">
                   <Compass size={24} strokeWidth={1.5} />
                 </div>
-                <span className="secondary-font text-[#1a38ff] text-xs sm:text-sm font-bold uppercase tracking-widest">
+                <span className="secondary-font text-[#092f61] text-xs sm:text-sm font-bold uppercase tracking-widest">
                   Our Mission
                 </span>
               </div>
-              <p className="primary-font text-slate-800 text-xl sm:text-2xl leading-relaxed italic">
+              <p className="secondary-font font-medium text-slate-800 text-xl sm:text-2xl leading-relaxed italic">
                 "To empower organizations with reliable talent solutions, innovative business services, and technology-enabled systems that create measurable impact and long-term value."
               </p>
             </motion.div>
@@ -173,10 +168,10 @@ const AboutPage = () => {
             className="flex flex-col gap-16"
           >
             <div className="max-w-xl">
-              <h2 className="secondary-font text-[#1a38ff] text-xs sm:text-sm font-bold uppercase tracking-[0.3em] mb-4 flex items-center gap-2">
-                <span className="w-4 h-[2px] bg-[#1a38ff]"></span> 01 / Foundation
+              <h2 className="secondary-font text-[#e67416] text-xs sm:text-sm font-bold uppercase tracking-[0.3em] mb-4 flex items-center gap-2">
+                <span className="w-4 h-[2px] bg-[#e67416]"></span> 01 / Foundation
               </h2>
-              <p className="primary-font text-slate-900 text-3xl sm:text-4xl uppercase leading-none">
+              <p className="secondary-font font-black text-[#092f61] text-3xl sm:text-4xl uppercase leading-none tracking-tight">
                 The Values That Guide Us
               </p>
             </div>
@@ -186,13 +181,13 @@ const AboutPage = () => {
                 <motion.div
                   key={idx}
                   variants={itemVariants}
-                  className="bg-slate-50 p-8 border border-slate-100 rounded-[2rem] hover:bg-white hover:border-[#1a38ff]/20 hover:shadow-2xl hover:shadow-[#1a38ff]/5 hover:-translate-y-1 transition-all duration-500 flex flex-col justify-between group min-h-[260px]"
+                  className="bg-slate-50 p-8 border border-slate-100 rounded-[2rem] hover:bg-white hover:border-[#092f61]/20 hover:shadow-2xl hover:shadow-[#092f61]/5 hover:-translate-y-1 transition-all duration-500 flex flex-col justify-between group min-h-[260px]"
                 >
-                  <div className="w-12 h-12 rounded-full bg-white text-[#1a38ff] shadow-sm flex items-center justify-center group-hover:bg-[#1a38ff] group-hover:text-white transition-colors duration-500 mb-6">
+                  <div className="w-12 h-12 rounded-full bg-white text-[#092f61] shadow-sm flex items-center justify-center group-hover:bg-[#092f61] group-hover:text-white transition-colors duration-500 mb-6">
                     {val.icon}
                   </div>
                   <div>
-                    <h3 className="secondary-font text-slate-900 font-bold text-lg mb-2 group-hover:text-[#1a38ff] transition-colors">
+                    <h3 className="secondary-font text-slate-900 font-bold text-lg mb-2 group-hover:text-[#e67416] transition-colors">
                       {val.title}
                     </h3>
                     <p className="secondary-font text-slate-600 text-sm leading-relaxed font-medium">
@@ -205,10 +200,6 @@ const AboutPage = () => {
           </motion.div>
         </div>
       </section>
-
-      
-
-      
 
     </main>
   );

@@ -1,6 +1,6 @@
-
 import { motion, type Variants } from "framer-motion";
 import { ArrowRight, Users, Cpu, TrendingUp, Briefcase } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Services = () => {
   // Soft, editorial stagger variants
@@ -79,27 +79,27 @@ const Services = () => {
               TOP ROW: Centered Editorial Header
           ========================================= */}
           <div className="flex flex-col items-center text-center max-w-4xl mx-auto">
-            {/* Section Tag */}
+            {/* Section Tag - Orange Accent */}
             <motion.div
               variants={itemVariants}
               className="flex items-center gap-3 mb-8"
             >
-              <span className="w-8 h-[2px] bg-[#1a38ff]"></span>
-              <span className="secondary-font text-[#1a38ff] text-xs sm:text-sm font-bold uppercase tracking-[0.3em]">
+              <span className="w-8 h-[2px] bg-[#e67416]"></span>
+              <span className="secondary-font text-[#e67416] text-xs sm:text-sm font-bold uppercase tracking-[0.3em]">
                 System / Services
               </span>
-              <span className="w-8 h-[2px] bg-[#1a38ff]"></span>
+              <span className="w-8 h-[2px] bg-[#e67416]"></span>
             </motion.div>
 
-            {/* Mixed Typography Heading */}
+            {/* Mixed Typography Heading - All Secondary Font & Navy */}
             <motion.h2
               variants={itemVariants}
               className="flex flex-col mb-10 w-full"
             >
-              <span className="secondary-font text-[#1a38ff] font-black uppercase tracking-tighter leading-[0.9] text-5xl sm:text-6xl md:text-8xl">
+              <span className="secondary-font text-[#092f61] font-black uppercase tracking-tighter leading-[0.9] text-5xl sm:text-6xl md:text-8xl">
                 Operational
               </span>
-              <span className="primary-font text-[#1a38ff] leading-[1] text-6xl sm:text-7xl md:text-8xl lg:text-[8rem] -mt-2 sm:-mt-4">
+              <span className="secondary-font text-[#092f61] font-black uppercase tracking-tighter leading-[1] text-5xl sm:text-6xl md:text-8xl -mt-1 sm:-mt-2">
                 Capabilities
               </span>
             </motion.h2>
@@ -121,9 +121,9 @@ const Services = () => {
                 border
                 border-slate-100
                 hover:bg-white
-                hover:border-[#1a38ff]/20
+                hover:border-[#092f61]/20
                 hover:shadow-2xl
-                hover:shadow-[#1a38ff]/5
+                hover:shadow-[#092f61]/5
                 hover:-translate-y-2
                 transition-all
                 duration-500
@@ -137,17 +137,17 @@ const Services = () => {
               >
                 {/* Top Row: Icon & ID */}
                 <div className="flex items-start justify-between mb-12 relative z-10">
-                  <div className="w-16 h-16 rounded-full bg-white shadow-sm flex items-center justify-center text-[#1a38ff] group-hover:scale-110 transition-transform duration-500">
+                  <div className="w-16 h-16 rounded-full bg-white shadow-sm flex items-center justify-center text-[#092f61] group-hover:scale-110 transition-transform duration-500">
                     {service.icon}
                   </div>
-                  <span className="primary-font text-slate-300 text-4xl sm:text-5xl group-hover:text-[#1a38ff]/20 transition-colors duration-500">
+                  <span className="secondary-font font-black tracking-tighter text-slate-200 text-5xl sm:text-6xl group-hover:text-[#092f61]/10 transition-colors duration-500">
                     {service.id}
                   </span>
                 </div>
 
                 {/* Bottom Row: Text & Link */}
                 <div className="relative z-10">
-                  <h3 className="secondary-font text-slate-900 font-bold text-2xl sm:text-3xl tracking-tight mb-4 group-hover:text-[#1a38ff] transition-colors duration-300">
+                  <h3 className="secondary-font text-slate-900 font-bold text-2xl sm:text-3xl tracking-tight mb-4 group-hover:text-[#092f61] transition-colors duration-300">
                     {service.title}
                   </h3>
                   <p className="secondary-font text-slate-600 text-sm sm:text-base leading-relaxed font-medium mb-8">
@@ -155,12 +155,15 @@ const Services = () => {
                   </p>
 
                   {/* Clean Animated Link */}
-                  <div className="flex items-center gap-3 text-[#1a38ff] uppercase text-xs font-bold tracking-widest secondary-font">
-                    <span>Know More</span>
-                    <div className="w-8 h-8 rounded-full bg-[#1a38ff]/10 flex items-center justify-center group-hover:bg-[#1a38ff] group-hover:text-white transition-colors duration-300">
+                  <Link to="/services">
+                  <div className="flex items-center gap-3 text-[#092f61] uppercase text-xs font-bold tracking-widest secondary-font">
+                    <span className="group-hover:text-[#e67416] transition-colors duration-300">Know More</span>
+                    {/* Arrow background changes to Orange on hover */}
+                    <div className="w-8 h-8 rounded-full bg-[#092f61]/10 flex items-center justify-center group-hover:bg-[#e67416] group-hover:text-white transition-colors duration-300">
                       <ArrowRight size={14} className="transform group-hover:translate-x-0.5 transition-transform" />
                     </div>
                   </div>
+                  </Link>
                 </div>
               </motion.div>
             ))}

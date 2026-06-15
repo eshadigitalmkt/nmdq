@@ -1,4 +1,3 @@
-
 import { motion, type Variants } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -66,20 +65,20 @@ const Hero = () => {
       >
         
 
-        {/* Scaled-down Mixed Typography Heading */}
+        {/* Scaled-down Mixed Typography Heading (Now strictly Secondary Font) */}
         <motion.h1
           variants={itemVariants}
           className="flex flex-col items-center justify-center w-full mt-10"
         >
-          {/* Sans-serif part - Reduced sizes */}
+          {/* Top Line */}
           <span
             className="
             secondary-font
-            text-[#1a38ff]
+            text-[#092f61]
             font-black
             uppercase
-            leading-[0.85]
             tracking-tighter
+            leading-[0.9]
             text-[3rem]
             sm:text-[4rem]
             md:text-[5rem]
@@ -90,12 +89,15 @@ const Hero = () => {
             Empowering
           </span>
           
-          {/* Serif part - Reduced sizes and adjusted margins */}
+          {/* Bottom Line */}
           <span
             className="
-            primary-font
-            text-[#1a38ff]
-            leading-[1.2]
+            secondary-font
+            text-[#092f61]
+            font-black
+            uppercase
+            tracking-tighter
+            leading-[1]
             text-[3.5rem]
             sm:text-[5rem]
             md:text-[6.5rem]
@@ -117,7 +119,7 @@ const Hero = () => {
           variants={itemVariants}
           className="
           secondary-font
-          text-[#1a38ff]
+          text-[#092f61]
           font-bold
           uppercase
           tracking-[0.25em]
@@ -131,9 +133,7 @@ const Hero = () => {
           Through Workforce, Technology & Strategy
         </motion.span>
 
-        {/* List items (<li>) as requested 
-          Formatted as a high-end editorial index
-        */}
+        {/* List items (<li>) formatted as a high-end editorial index */}
         <motion.ul
           variants={itemVariants}
           className="
@@ -155,11 +155,11 @@ const Hero = () => {
           "
         >
           <li>Recruitment</li>
-          <li className="text-[#1a38ff] select-none">•</li>
+          <li className="text-[#e67416] select-none">•</li>
           <li>Staffing</li>
-          <li className="text-[#1a38ff] select-none">•</li>
+          <li className="text-[#e67416] select-none">•</li>
           <li>Consulting</li>
-          <li className="text-[#1a38ff] select-none">•</li>
+          <li className="text-[#e67416] select-none">•</li>
           <li>Technology</li>
         </motion.ul>
 
@@ -176,63 +176,63 @@ const Hero = () => {
           gap-5
           "
         >
-          <Link to="/contact" >
-          <button
-            className="
-            secondary-font
-            group
-            h-14
-            px-10
-            bg-[#1a38ff]
-            text-white
-            font-bold
-            uppercase
-            tracking-widest
-            text-xs
-            sm:text-sm
-            flex
-            items-center
-            justify-center
-            gap-3
-            rounded-full
-            transition-all
-            duration-300
-            hover:scale-105
-            hover:shadow-xl
-            hover:shadow-[#1a38ff]/20
-            "
-          >
-            Partner With Us
-            <ArrowRight
-              size={18}
-              className="transition-transform group-hover:translate-x-1"
-            />
-          </button>
+          <Link to="/contact">
+            <button
+              className="
+              secondary-font
+              group
+              h-14
+              px-10
+              bg-[#e67416]
+              text-white
+              font-bold
+              uppercase
+              tracking-widest
+              text-xs
+              sm:text-sm
+              flex
+              items-center
+              justify-center
+              gap-3
+              rounded-full
+              transition-all
+              duration-300
+              hover:scale-105
+              hover:shadow-xl
+              hover:shadow-[#e67416]/20
+              "
+            >
+              Partner With Us
+              <ArrowRight
+                size={18}
+                className="transition-transform group-hover:translate-x-1"
+              />
+            </button>
           </Link>
 
           <Link to="/services">
-          <button 
-            className="
-            secondary-font
-            h-14
-            px-10
-            border-2
-            border-[#1a38ff]
-            bg-transparent
-            text-[#1a38ff]
-            font-bold
-            uppercase
-            tracking-widest
-            text-xs
-            sm:text-sm
-            rounded-full
-            transition-all
-            duration-300
-            hover:bg-[#1a38ff]
-            hover:text-white
-            "
-          >
-            View Services
+            <button 
+              className="
+              secondary-font
+              h-14
+              px-10
+              border-2
+              border-[#092f61]
+              bg-transparent
+              text-[#092f61]
+              font-bold
+              uppercase
+              tracking-widest
+              text-xs
+              sm:text-sm
+              rounded-full
+              transition-all
+              duration-300
+              hover:bg-[#092f61]
+              hover:text-white
+              "
+            >
+              View Services
             </button>
           </Link>
         </motion.div>
