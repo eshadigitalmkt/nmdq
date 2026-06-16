@@ -1,11 +1,23 @@
 import { useState } from "react";
 import { motion, AnimatePresence, type Variants } from "framer-motion";
-import { Mail, Phone, ArrowRight, MapPin, ChevronDown } from "lucide-react";
+import { Mail, Phone, ArrowRight, MapPin, ChevronDown, Clock, CheckCircle2, AlertCircle, Loader2 } from "lucide-react";
+import emailjs from '@emailjs/browser';
 
 const ContactPage = () => {
-  // Custom Dropdown State
+  // Custom Dropdown & Form State
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [selectedService, setSelectedService] = useState("");
+  
+  const [formData, setFormData] = useState({
+    name: "",
+    company: "",
+    email: "",
+    phone: "",
+  });
+
+  // Submission States
+  const [status, setStatus] = useState("idle"); // 'idle' | 'submitting' | 'success' | 'error'
+  const [errorMessage, setErrorMessage] = useState("");
 
   const serviceOptions = [
     { value: "workforce", label: "Workforce & Staffing Solutions" },
@@ -63,6 +75,56 @@ const ContactPage = () => {
       link: "https://maps.google.com/?q=House+no+1+F45+Building+Masjid+Banda+Rd+Kondapur+Hyderabad+Telangana+500084" 
     }
   ];
+
+ const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+ const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    // Basic Validation
+    if (!formData.name || !formData.email || !selectedService) {
+      setStatus("error");
+      setErrorMessage("Please fill in all required fields.");
+      return;
+    }
+
+    setStatus("submitting");
+    setErrorMessage("");
+
+    const selectedServiceLabel = serviceOptions.find(opt => opt.value === selectedService)?.label || "Not specified";
+
+    const templateParams = {
+      from_name: formData.name,
+      company_name: formData.company || "N/A",
+      reply_to: formData.email,
+      phone_number: formData.phone || "N/A",
+      service_interest: selectedServiceLabel,
+    };
+
+    // Replace these with your actual EmailJS IDs
+    emailjs.send(
+      'service_xmfxpwb', 
+      'template_1nej093', 
+      templateParams, 
+      'xGXMYfn4ukfC5Hm1i'
+    )
+      .then(() => {
+        setStatus("success");
+        // Reset form
+        setFormData({ name: "", company: "", email: "", phone: "" });
+        setSelectedService("");
+        
+        // Reset success message after 5 seconds
+        setTimeout(() => setStatus("idle"), 5000);
+      })
+      .catch((err) => {
+        console.error("EmailJS Error:", err);
+        setStatus("error");
+        setErrorMessage("Something went wrong. Please try again later or contact us directly.");
+      });
+  };
 
   return (
     <main className="w-full bg-white text-slate-900 selection:bg-[#092f61] selection:text-white overflow-hidden pb-24">
@@ -153,7 +215,18 @@ const ContactPage = () => {
                 ))}
               </div>
 
-              
+              {/* Working Hours Badge - Navy border/text */}
+              <motion.div variants={itemVariants} className="mt-4 flex items-center gap-3 p-5 rounded-3xl bg-[#092f61]/5 border border-[#092f61]/10">
+                <Clock size={20} className="text-[#092f61]" />
+                <div className="flex flex-col">
+                  <span className="secondary-font text-xs font-bold uppercase tracking-widest text-[#092f61]">
+                    Operating Hours
+                  </span>
+                  <span className="secondary-font text-sm font-medium text-slate-700 mt-1">
+                    Monday – Friday, 9:00 AM to 6:00 PM (IST)
+                  </span>
+                </div>
+              </motion.div>
             </div>
 
             {/* Right Column: The Contact Form */}
@@ -165,7 +238,7 @@ const ContactPage = () => {
                 Send Us a Message
               </h3>
 
-              <form className="flex flex-col gap-6" onSubmit={(e) => e.preventDefault()}>
+              <form className="flex flex-col gap-6" onSubmit={handleSubmit}>
                 
                 {/* Name & Company Row */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
@@ -175,6 +248,9 @@ const ContactPage = () => {
                     </label>
                     <input 
                       type="text" 
+                      name="name"
+                      value={formData.name}
+                      onChange={handleInputChange}
                       placeholder="John Doe"
                       className="w-full bg-slate-50 border border-slate-200 rounded-2xl px-5 py-4 secondary-font text-sm text-slate-900 focus:outline-none focus:border-[#092f61] focus:ring-1 focus:ring-[#092f61] transition-all"
                     />
@@ -185,6 +261,9 @@ const ContactPage = () => {
                     </label>
                     <input 
                       type="text" 
+                      name="company"
+                      value={formData.company}
+                      onChange={handleInputChange}
                       placeholder="Your Company"
                       className="w-full bg-slate-50 border border-slate-200 rounded-2xl px-5 py-4 secondary-font text-sm text-slate-900 focus:outline-none focus:border-[#092f61] focus:ring-1 focus:ring-[#092f61] transition-all"
                     />
@@ -199,6 +278,9 @@ const ContactPage = () => {
                     </label>
                     <input 
                       type="email" 
+                      name="email"
+                      value={formData.email}
+                      onChange={handleInputChange}
                       placeholder="john@example.com"
                       className="w-full bg-slate-50 border border-slate-200 rounded-2xl px-5 py-4 secondary-font text-sm text-slate-900 focus:outline-none focus:border-[#092f61] focus:ring-1 focus:ring-[#092f61] transition-all"
                     />
@@ -209,7 +291,10 @@ const ContactPage = () => {
                     </label>
                     <input 
                       type="tel" 
-                      placeholder="+1 (555) 000-0000"
+                      name="phone"
+                      value={formData.phone}
+                      onChange={handleInputChange}
+                      placeholder="+91 (000) 000-0000"
                       className="w-full bg-slate-50 border border-slate-200 rounded-2xl px-5 py-4 secondary-font text-sm text-slate-900 focus:outline-none focus:border-[#092f61] focus:ring-1 focus:ring-[#092f61] transition-all"
                     />
                   </div>
@@ -271,13 +356,49 @@ const ContactPage = () => {
                   </AnimatePresence>
                 </div>
 
+                {/* Status Messages */}
+                <AnimatePresence>
+                  {status === "error" && (
+                    <motion.div 
+                      initial={{ opacity: 0, height: 0 }} 
+                      animate={{ opacity: 1, height: "auto" }} 
+                      exit={{ opacity: 0, height: 0 }}
+                      className="flex items-center gap-2 text-red-500 secondary-font text-sm font-bold bg-red-50 p-4 rounded-xl border border-red-100"
+                    >
+                      <AlertCircle size={18} />
+                      {errorMessage}
+                    </motion.div>
+                  )}
+                  {status === "success" && (
+                    <motion.div 
+                      initial={{ opacity: 0, height: 0 }} 
+                      animate={{ opacity: 1, height: "auto" }} 
+                      exit={{ opacity: 0, height: 0 }}
+                      className="flex items-center gap-2 text-[#092f61] secondary-font text-sm font-bold bg-[#092f61]/5 p-4 rounded-xl border border-[#092f61]/10"
+                    >
+                      <CheckCircle2 size={18} className="text-[#e67416]" />
+                      Your request has been sent successfully. We will be in touch shortly.
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+
                 {/* Submit Button - Orange Pill */}
                 <button 
                   type="submit"
-                  className="secondary-font group mt-4 h-14 w-full bg-[#e67416] text-white font-bold uppercase tracking-widest text-sm flex items-center justify-center gap-3 rounded-full transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-[#e67416]/20"
+                  disabled={status === "submitting"}
+                  className="secondary-font group mt-2 h-14 w-full bg-[#e67416] text-white font-bold uppercase tracking-widest text-sm flex items-center justify-center gap-3 rounded-full transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-[#e67416]/20 disabled:opacity-70 disabled:hover:scale-100 disabled:cursor-not-allowed"
                 >
-                  Send Request
-                  <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" />
+                  {status === "submitting" ? (
+                    <>
+                      Sending...
+                      <Loader2 size={18} className="animate-spin" />
+                    </>
+                  ) : (
+                    <>
+                      Send Request
+                      <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" />
+                    </>
+                  )}
                 </button>
                 
                 <p className="secondary-font text-center text-xs text-slate-400 mt-2 font-medium">
