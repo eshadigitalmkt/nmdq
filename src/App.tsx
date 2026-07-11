@@ -8,7 +8,7 @@ import HomePage from "./Pages/HomePage";
 import AboutPage from "./Pages/AboutPage"
 import ServicesPage from "./Pages/ServicesPage";
 import ContactPage from "./Pages/ContactPage";
-
+import SocialMediaBar from "./components/SocvilaMediaBar"
 
 
 
@@ -17,7 +17,7 @@ const App = () => {
     <main className="min-h-screen bg-white text-slate-900 selection:bg-[#1a38ff] selection:text-white">
       {/* Persistent Navigation */}
       <Navbar />
-      
+      <SocialMediaBar />
       {/* Dynamic Route Switching */}
       <Routes>
         <Route path="/" element={<HomePage />} />
