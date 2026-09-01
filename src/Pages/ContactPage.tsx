@@ -71,7 +71,7 @@ const ContactPage = () => {
       icon: <MapPin size={24} />,
       title: "Our Office",
       desc: "Visit us at our main headquarters.",
-      value: "House no: 1, F45 Building, 42/1, Masjid Banda Rd, above Tulsi Furniture, Kondapur, Hyderabad, Telangana 500084",
+      value: "Plot No. 975, Sai Samrat Apartments, 701, 7th Floor, Vasanthnagar, KPHB, PIN Code 500085, Kukatpally, Medchal (Malkajgiri), Telangana.",
       link: "https://maps.google.com/?q=House+no+1+F45+Building+Masjid+Banda+Rd+Kondapur+Hyderabad+Telangana+500084" 
     }
   ];
